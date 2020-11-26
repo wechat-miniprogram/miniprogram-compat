@@ -1,13 +1,24 @@
 {
   "name": "miniprogram-compat",
   "version": "1.0.0",
-  "description": "",
+  "description": "微信小程序 js 执行环境的兼容信息",
+  "keywords": [
+    "miniprogram",
+    "compat",
+    "browserslist",
+    "corejs"
+  ],
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "chyizheng",
   "license": "MIT",
+  "homepage": "https://github.com/wechat-miniprogram/miniprogram-compat",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wechat-miniprogram/miniprogram-compat"
+  },
   "dependencies": {
     "semver": "^7.3.2"
   }
