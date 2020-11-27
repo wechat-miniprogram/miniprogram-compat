@@ -8,8 +8,13 @@
     "browserslist",
     "corejs"
   ],
-  "main": "index.js",
+  "main": "dist/index.js",
+  "files": [
+    "data/",
+    "dist/"
+  ],
   "scripts": {
+    "build": "babel --config-file ./babel.config.js src -d dist",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "chyizheng",
@@ -21,5 +26,11 @@
   },
   "dependencies": {
     "semver": "^7.3.2"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.12.8",
+    "@babel/core": "^7.12.9",
+    "@babel/preset-env": "^7.12.7",
+    "@types/semver": "^7.3.4"
   }
 }
