@@ -9,12 +9,10 @@
     "corejs"
   ],
   "main": "dist/index.js",
-  "files": [
-    "data/",
-    "dist/"
-  ],
+  "types": "index.d.ts",
   "scripts": {
     "build": "babel --config-file ./babel.config.js src -d dist",
+    "prepublishOnly": "npm run build",
     "test": "jest"
   },
   "author": "chyizheng",
