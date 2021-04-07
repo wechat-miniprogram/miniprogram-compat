@@ -18,7 +18,7 @@ export function getBrowsersList(version) {
 /**
  * 获取小程序对应基础库的 polyfill 信息
  * @param {string} version 小程序基础库版本
- * @return {{ coreJsVersion: string; exclude?: string[] } | null}
+ * @return {{ coreJsVersion: string; coreJsModules: string[] } | null}
  */
 export function getPolyfillInfo(version) {
   const satisfiedVersion = semver.maxSatisfying(

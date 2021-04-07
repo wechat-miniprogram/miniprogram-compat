@@ -14,6 +14,6 @@ npm install miniprogram-compat --save-dev
 
 获取小程序对应基础库的 browserslist 信息
 
-### `getPolyfillInfo(version: string): string[]`
+### `getPolyfillInfo(version: string): { coreJsVersion: string; coreJsModules: string[] }`
 
 获取小程序对应基础库的 polyfill 信息
