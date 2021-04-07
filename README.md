@@ -17,3 +17,5 @@ npm install miniprogram-compat --save-dev
 ### `getPolyfillInfo(version: string): { coreJsVersion: string; coreJsModules: string[] }`
 
 获取小程序对应基础库的 polyfill 信息
+- `coreJsVersion` 基础库内置的 core-js 版本号
+- `coreJsModules` 基础库内置的 core-js 模块列表 (对应 core-js 3)
