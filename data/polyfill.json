@@ -3,7 +3,7 @@
     "coreJsVersion": "2.5.1",
     "coreJsModules": []
   },
-  "2.14.0": {
+  "2.8.1": {
     "coreJsVersion": "2.5.1",
     "coreJsModules": [
       "es.array-buffer.constructor",
