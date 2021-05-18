@@ -1,5 +1,7 @@
 # miniprogram-compat
 
+[在线支持度列表](https://wechat-miniprogram.github.io/miniprogram-compat/)
+
 微信小程序 js 执行环境的兼容信息 [browserslist](https://github.com/browserslist/browserslist) 配置以及自带的 [polyfill](https://developers.weixin.qq.com/miniprogram/dev/framework/runtime/js-support.html) 信息
 
 ## 安装
