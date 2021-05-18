@@ -25,6 +25,9 @@
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
   },
+  "engines": {
+    "node": ">=10"
+  },
   "dependencies": {
     "semver": "^7.3.2"
   },
@@ -32,9 +35,12 @@
     "@babel/cli": "^7.12.8",
     "@babel/core": "^7.12.9",
     "@babel/preset-env": "^7.12.7",
+    "@mdn/browser-compat-data": "^3.3.3",
     "@types/jest": "^26.0.22",
     "@types/semver": "^7.3.4",
+    "browserslist": "^4.16.6",
     "core-js-compat": "^3.10.0",
-    "jest": "^26.6.3"
+    "jest": "^26.6.3",
+    "pug": "^3.0.2"
   }
 }

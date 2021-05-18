@@ -1,0 +1,67 @@
+mixin renderTest(feature, browser)
+  td(id=feature.id)
+    span
+      a.anchor(href='#' + feature.id) &#xA7;
+      - if (feature.mdn_url)
+        a(href=feature.mdn_url)
+          != feature.name
+          img(src="./assets/mdn.png", alt="mdn", width=15, height=13)
+      - else
+        != feature.name
+  - if (feature.subFeatures.length)
+    - for (var k = 0; k < browsers.length; ++k)
+      - var browser = browsers[k]
+      td.tally(data-browser=browser.id)
+  - else
+    - for (var k = 0; k < browsers.length; ++k)
+      - var browser = browsers[k]
+      - if (supportInfos.get(browser.id).get(feature.id))
+        td.yes(data-browser=browser.id) Yes
+      - else
+        td.no(data-browser=browser.id) No
+
+doctype html
+html
+  head
+    meta(charset="utf-8")
+    link(rel="shortcut icon", href="./assets/favicon.ico")
+    meta(name="viewport" content="width=device-width")
+    title MiniProgram ECMAScript compatibility table
+    link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Open+Sans:300,600")
+    link(rel="stylesheet", href="./assets/master.css")
+    script(src="https://unpkg.com/jquery@1.12.4/dist/jquery.min.js")
+    script(src="./assets/master.js")
+  body.es6
+    #header
+      a#logo(href="./")
+        img(src="./assets/logo.png", alt="MP compat")
+      #nav
+        span.hidden-mobile MiniProgram ECMAScript compatibility table
+    #body
+      //- .controls
+      table#table-wrapper
+        thead
+          tr
+            th.platformtype(colspan=1)
+            th.platformtype(colspan=browsers.length style="background: #fff4ce") MiniProgram
+          tr
+            th.test-name Feature name
+            - for (var i = 0; i < browsers.length; ++i)
+              - var browser = browsers[i]
+              th.platform(data-browser=browser.id)
+                a.browser-name(href='#'+browser.id)
+                  abbr(title=browser.name)= browser.name
+        tbody
+          - for (var i = 0; i < categories.length; ++i)
+            - var category = categories[i]
+            tr.category
+              td(colspan=browsers.length)= category.name
+            - for (var j = 0; j < category.features.length; ++j)
+              - var feature = category.features[j]
+              tr(class=feature.subFeatures.length ? 'supertest' : '', significance=feature.subFeatures.length || 1)
+                +renderTest(feature, browser)
+              - for (var k = 0; k < feature.subFeatures.length; ++k)
+                - var subFeature = feature.subFeatures[k]
+                  tr.subtest(data-parent=feature.id, id=subFeature.id)
+                    +renderTest(subFeature, browser)
+    #footnotes
