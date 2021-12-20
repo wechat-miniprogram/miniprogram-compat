@@ -1,6 +1,6 @@
 {
   "name": "miniprogram-compat",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "微信小程序 js 执行环境的兼容信息",
   "keywords": [
     "miniprogram",
