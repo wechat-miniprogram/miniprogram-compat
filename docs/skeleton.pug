@@ -43,7 +43,9 @@ html
         thead
           tr
             th.platformtype(colspan=1)
-            th.platformtype(colspan=browsers.length style="background: #fff4ce") MiniProgram
+            th.platformtype(colspan=browsers.length style="background: #fff4ce") MiniProgram Lib Version
+              a(href="#miniprogram-lib-version-note")
+                sup [1]
           tr
             th.test-name Feature name
             - for (var i = 0; i < browsers.length; ++i)
@@ -64,4 +66,7 @@ html
                 - var subFeature = feature.subFeatures[k]
                   tr.subtest(data-parent=feature.id, id=subFeature.id)
                     +renderTest(subFeature, browser)
-    #footnotes
+      #footnotes
+        p#miniprogram-lib-version-note
+          sup [1]
+          | 基础库版本只列出存在特性变更的版本号，未列出的版本支持度与列出的较低版本一致（如基础库 2.20.0 支持度与列出的 2.16.1 一致）

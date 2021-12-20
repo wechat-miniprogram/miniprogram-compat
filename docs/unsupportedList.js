@@ -2,7 +2,6 @@ const miniprogramCompat = require("../dist/index");
 const semver = require("semver");
 
 const browserAlias = {
-  chrome: "chrome",
   ios: "safari_ios",
 };
 
@@ -30,6 +29,7 @@ const checkSupported = (featureKey, support, browsers, coreJsModules) => {
       const supportBrowserInfo = Array.isArray(support[browser])
         ? support[browser][0]
         : support[browser];
+      if (!supportBrowserInfo) console.log(support, browser, browsers)
       const supportBrowserVersion = supportBrowserInfo.version_added;
       return (
         supportBrowserVersion &&
@@ -158,7 +158,7 @@ const getSupportInfoMap = (miniprogramVersion) => {
     .getBrowsersList(miniprogramVersion)
     .reduce((browsers, info) => {
       const [browser, version] = info.split(" ");
-      browsers[browserAlias[browser]] = version;
+      browsers[browserAlias[browser] || browser] = version;
       return browsers;
     }, {});
 
