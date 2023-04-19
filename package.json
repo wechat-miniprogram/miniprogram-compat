@@ -35,11 +35,11 @@
     "@babel/cli": "^7.12.8",
     "@babel/core": "^7.12.9",
     "@babel/preset-env": "^7.12.7",
-    "@mdn/browser-compat-data": "^3.3.3",
+    "@mdn/browser-compat-data": "^5.2.51",
     "@types/jest": "^26.0.22",
     "@types/semver": "^7.3.4",
     "browserslist": "^4.16.6",
-    "core-js-compat": "^3.10.0",
+    "core-js-compat": "^3.29.0",
     "jest": "^26.6.3",
     "pug": "^3.0.2"
   }

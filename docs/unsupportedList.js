@@ -10,12 +10,15 @@ const moduleAlias = {
   "builtins.Array.keys": "array.iterator",
   "builtins.Array.values": "array.iterator",
   "builtins.Array.entries": "array.iterator",
+  "builtins.Error.Error.options_cause_parameter": "error.cause",
+  "builtins.String.at": "string.at-alternative",
 };
 
 const featureKeyToCoreJsModule = (featureKey) => {
   if (!moduleAlias[featureKey]) {
     moduleAlias[featureKey] = featureKey
       .replace(/^builtins\./, "")
+      .replace(/^RegExp/, 'regexp')
       .replace(/(?:^|\.)([A-Z])/g, (m) => m.toLowerCase())
       .replace(/([A-Z])/g, (m) => "-" + m.toLowerCase());
   }
@@ -102,7 +105,7 @@ const _getCategories = (jsonData) => {
   };
 
   const forceParentFeature = (featureKey) => {
-    return ['operators', 'statements', 'grammar'].includes(featureKey)
+    return ['operators', 'statements', 'grammar', 'regular_expressions'].includes(featureKey)
   }
 
   const internalProcess = (featureKey, data) => {

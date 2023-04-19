@@ -20,5 +20,14 @@
     "ios 11",
     "chrome 66",
     "safari 10"
+  ],
+  "2.21.0": [
+    "ios 12",
+    "chrome 66",
+    "safari 10"
+  ],
+  "2.30.0": [
+    "ios 12",
+    "chrome 86"
   ]
 }
