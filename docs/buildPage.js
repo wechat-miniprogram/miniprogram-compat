@@ -4,8 +4,10 @@ const path = require('path')
 const {getCategories, getSupportInfoMap} = require('./unsupportedList')
 
 const browsers = [
+  { id: "3_6_0", name: "3.6.0" },
   { id: "2_30_3", name: "2.30.3" },
   { id: "2_30_0", name: "2.30.0" },
+  { id: "2_28_0", name: "2.28.0" },
   { id: "2_23_1", name: "2.23.1" },
   { id: "2_21_0", name: "2.21.0" },
   { id: "2_20_2", name: "2.20.2" },

@@ -26,8 +26,17 @@
     "chrome 66",
     "safari 10"
   ],
+  "2.28.0": [
+    "ios 13",
+    "chrome 66",
+    "safari 10"
+  ],
   "2.30.0": [
-    "ios 12",
+    "ios 13",
+    "chrome 86"
+  ],
+  "3.6.0": [
+    "ios 14",
     "chrome 86"
   ]
 }
