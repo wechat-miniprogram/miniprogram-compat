@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.0.4
+ - update info for 3.6.0
+ - update mdn info
+
 ## 1.0.3
  - update info for 2.20.2
 ## 1.0.2
