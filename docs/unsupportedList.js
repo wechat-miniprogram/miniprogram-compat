@@ -7,6 +7,7 @@ const browserAlias = {
 
 const moduleAlias = {
   "builtins.AggregateError.AggregateError": "aggregate-error",
+  "builtins.AggregateError.errors": "aggregate-error",
   "builtins.Array.keys": "array.iterator",
   "builtins.Array.values": "array.iterator",
   "builtins.Array.entries": "array.iterator",
